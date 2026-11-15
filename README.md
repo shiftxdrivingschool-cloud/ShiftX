@@ -1,4 +1,4 @@
-# EastRand Driving School website
+# ShiftX Driving School website
 
 Static site (HTML, CSS, JS). No build step.
 

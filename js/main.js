@@ -1,8 +1,8 @@
 (function () {
   "use strict";
-  var cfg = window.EASTRAND_CONFIG || {};
+  var cfg = window.SHIFTX_CONFIG || window.EASTRAND_CONFIG || {};
   var isPlaceholderPhone = !cfg.phoneIntl || cfg.phoneIntl === "27000000000";
-  var greeting = "Hi EastRand Driving School, I'd like to find out about lessons.";
+  var greeting = "Hi ShiftX Driving School, I'd like to find out about lessons.";
 
   /* Mobile navigation */
   var toggle = document.querySelector(".nav-toggle");
@@ -52,7 +52,7 @@
 
       if (channel === "email") {
         var emailLines = [
-          "Good day EastRand Driving School,",
+          "Good day ShiftX Driving School,",
           "",
           "I would like to enquire about your driving school services. Here are my details:",
           "",
@@ -71,17 +71,17 @@
         var subject = "Driving School Enquiry: " + pkg + " - " + fullName;
         status.style.color = "#146C2E";
         status.textContent = "Opening your email app with your details pre-filled\u2026";
-        window.location.href = "mailto:" + (cfg.email || "eastranddrivingschool@gmail.com") +
+        window.location.href = "mailto:" + (cfg.email || "shiftxdrivingschool@gmail.com") +
           "?subject=" + encodeURIComponent(subject) +
           "&body=" + encodeURIComponent(emailLines);
       } else {
         if (isPlaceholderPhone) {
           status.style.color = "#B3261E";
-          status.textContent = "Phone number is being updated. Please use 'Send by email' or email eastranddrivingschool@gmail.com directly.";
+          status.textContent = "Phone number is being updated. Please use 'Send by email' or email " + (cfg.email || "shiftxdrivingschool@gmail.com") + " directly.";
           return;
         }
         var waLines = [
-          "Hi EastRand Driving School,",
+          "Hi ShiftX Driving School,",
           "My name is " + fullName + ".",
           "I live in: " + area + ".",
           "I'm interested in: " + pkg + ".",
